@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.login {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #0f172a, #2563eb);
+}
+
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  margin: 15px 0;
+  box-shadow: 0 4px 15px #0001;
+}
+
+.login .card {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #2563eb;
+}
+
+header {
+  background: #0f172a;
+  color: white;
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h2 {
+  color: white;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+input, select {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: 0;
+  padding: 12px 16px;
+  margin: 5px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.big, #loginForm button {
+  width: 100%;
+  margin-top: 15px;
+}
+
+#answers button {
+  display: block;
+  width: 100%;
+  text-align: right;
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+#answers button:hover {
+  background: #bfdbfe;
+}
+
+#feedback {
+  font-weight: bold;
+}
+
+@media (max-width: 500px) {
+  header h2 {
+    font-size: 18px;
+  }
+}

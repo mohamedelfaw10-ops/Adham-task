@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adham Hassan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="login" class="login">
+    <div class="card">
+      <h1>Adham Hassan</h1>
+      <p>منصة اختبارات المرحلة الإعدادية</p>
+      <form id="loginForm">
+        <input id="username" placeholder="اسمك" required>
+        <button>دخول الموقع</button>
+      </form>
+    </div>
+  </section>
+
+  <div id="app" hidden>
+    <header>
+      <h2>Adham Hassan 📚</h2>
+      <button onclick="logout()">خروج</button>
+    </header>
+
+    <main>
+      <h2 id="welcome">أهلاً بك</h2>
+
+      <div class="card">
+        <label>الصف الدراسي</label>
+        <select id="grade">
+          <option value="1">أولى إعدادي</option>
+          <option value="2">تانية إعدادي</option>
+          <option value="3">تالتة إعدادي</option>
+        </select>
+
+        <label>الترم</label>
+        <select id="term">
+          <option value="1">الترم الأول</option>
+          <option value="2">الترم الثاني</option>
+        </select>
+
+        <label>المادة</label>
+        <select id="subject">
+          <option>اللغة العربية</option>
+          <option>اللغة الإنجليزية</option>
+          <option>اللغة الفرنسية</option>
+          <option>الرياضيات</option>
+          <option>العلوم</option>
+          <option>الدراسات الاجتماعية</option>
+          <option>التربية الدينية</option>
+          <option>الكمبيوتر وتكنولوجيا المعلومات</option>
+          <option>التربية الفنية</option>
+          <option>المهارات المهنية</option>
+        </select>
+
+        <button class="big" onclick="startQuiz()">ابدأ الامتحان</button>
+      </div>
+
+      <section id="quiz" class="card" hidden>
+        <p id="questionNumber"></p>
+        <h3 id="question"></h3>
+        <div id="answers"></div>
+        <p id="feedback"></p>
+        <button id="next" onclick="nextQuestion()" hidden>السؤال التالي</button>
+      </section>
+
+      <section id="result" class="card" hidden>
+        <h2>انتهى الامتحان 🎉</h2>
+        <h3 id="score"></h3>
+        <p id="review"></p>
+        <button onclick="startQuiz()">إعادة الامتحان</button>
+      </section>
+
+      <section class="card">
+        <h3>إنجازك</h3>
+        <p>عدد الامتحانات: <span id="examCount">0</span></p>
+        <p>آخر نتيجة: <span id="lastScore">-</span></p>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
